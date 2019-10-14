@@ -1,6 +1,5 @@
 use std::io::Read;
 
-#[inline(always)]
 fn max_pow(x: i32) -> String{
     let (step, pos) = match x {
         _ if x < 0 => (2, -x),
@@ -17,7 +16,8 @@ fn main(){
         .split_terminator('\n')
         .take_while(|s| s.chars().nth(0).unwrap() != '0')
         .map(|i| i.parse().expect("Can't parse stuff"))
-        .map(|i| max_pow(i)).collect();
+        .map(|i| max_pow(i))
+        .collect();
 
     print!("{}", ans);
 }
