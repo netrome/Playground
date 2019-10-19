@@ -1,5 +1,6 @@
 use std::io::Read;
 
+
 fn max_pow(x: i32) -> String{
     let (step, pos) = match x {
         _ if x < 0 => (2, -x),
@@ -13,6 +14,7 @@ fn max_pow(x: i32) -> String{
             .unwrap()
            )
 }
+
 
 fn main(){
     let mut buff = String::new();
