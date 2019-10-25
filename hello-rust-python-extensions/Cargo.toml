@@ -1,0 +1,17 @@
+[package]
+name = "herp"
+version = "0.1.0"
+authors = ["Mårten Nilsson <m@martennilsson.se>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "string_sum"
+crate-type = ["cdylib"]
+
+[dependencies]
+
+[dependencies.pyo3]
+version = "0.8.1"
+features = ["extension-module"]
